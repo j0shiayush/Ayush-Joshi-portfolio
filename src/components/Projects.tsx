@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ExternalLink, Code2, ChevronRight, ChevronLeft } from 'lucide-react';
 import { PROJECTS_DATA } from '../data/portfolioData';
 
