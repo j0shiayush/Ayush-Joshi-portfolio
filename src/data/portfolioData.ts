@@ -15,7 +15,6 @@ import type {
     phone: '+91 6394155238',
     location: 'Bengaluru / Noida, India',
     resumeUrl: 'https://drive.google.com/file/d/1HGPrpstvGzjrYgkTQB-5hC54m5vvhJOb/view?usp=sharing',
-    // Single professional portrait for the Hero section (replace with your local photo path)
     profileImage: 'images/ayush-photo.png',
     statusBadge: 'Available for Full-Time SDE & AI Engg. Roles',
     floatingHeroBadges: ['React.js', 'TypeScript', 'Next.js', 'FastAPI', 'LangChain / RAG'],

@@ -52,13 +52,11 @@ export const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* Horizontal Snapping Carousel */}
         <div 
           ref={carouselRef}
           className="flex overflow-x-auto snap-x snap-mandatory gap-6 sm:gap-8 pb-10 hide-scrollbar"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {/* Spacer for initial alignment */}
           <div className="w-[calc((100vw-72rem)/2)] shrink-0 hidden xl:block" />
 
           {PROJECTS_DATA.map((project, index) => (
@@ -70,7 +68,6 @@ export const Projects: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative shrink-0 w-[320px] sm:w-[450px] lg:w-[550px] snap-center sm:snap-start group rounded-3xl overflow-hidden bg-[#111] border border-white/10"
             >
-              {/* Project Image Full Wrapper */}
               <div className="relative h-[450px] sm:h-[550px] w-full overflow-hidden bg-neutral-900">
                 <img
                   src={project.image}
@@ -80,14 +77,12 @@ export const Projects: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
               </div>
 
-              {/* Floating Glass Info Card */}
               <div className="absolute inset-x-4 sm:inset-x-6 bottom-4 sm:bottom-6 p-6 rounded-2xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/10 shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-500">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
                   <h3 className="text-xl sm:text-2xl font-semibold text-neutral-200">
                     {project.title}
                   </h3>
                   
-                  {/* Action Links */}
                   <div className="flex items-center gap-2.5">
                     <a
                       href={project.githubUrl}
@@ -129,7 +124,6 @@ export const Projects: React.FC = () => {
             </motion.div>
           ))}
           
-          {/* End Spacer */}
           <div className="w-[calc((100vw-72rem)/2)] shrink-0 hidden xl:block" />
         </div>
       </div>

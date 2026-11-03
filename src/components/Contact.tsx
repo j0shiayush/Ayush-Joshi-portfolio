@@ -6,13 +6,10 @@ import { SpotlightCard } from './SpotlightCard';
 
 export const Contact: React.FC = () => {
   return (
-    // Added min-h-screen and flex-col to force full viewport height
     <section id="contact" className="relative min-h-screen flex flex-col px-6 pt-32 pb-6 bg-[#0a0a0a] border-t border-white/[0.06]">
       
-      {/* Wrapper with flex-grow forces the footer to the absolute bottom */}
       <div className="flex-grow flex flex-col justify-center max-w-3xl mx-auto w-full">
         
-        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +25,6 @@ export const Contact: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Contact Form Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +82,6 @@ export const Contact: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Footer - Now forced to the very bottom */}
       <footer className="w-full border-t border-white/[0.04] pt-6 mt-12 sm:mt-16">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-neutral-500 font-medium tracking-wide text-center">
           <p>Architecting scalable logic and intelligent systems.</p>

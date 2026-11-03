@@ -11,7 +11,6 @@ export const About: React.FC = () => {
       className="relative py-28 px-6 bg-[#0a0a0a] border-t border-white/[0.06]"
     >
       <div className="max-w-5xl mx-auto">
-        {/* Section Heading (Exact match to Vaibhav Sharma reference style) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +22,6 @@ export const About: React.FC = () => {
             About
           </h2>
 
-          {/* Narrative Paragraph with Bold White Highlighted Keywords */}
           <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed font-normal">
             I architect{' '}
             <span className="text-white font-medium hover:underline decoration-white/40 underline-offset-4 transition-all">
@@ -46,7 +44,6 @@ export const About: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Achievement & Education Spotlight Strip */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +51,6 @@ export const About: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-16"
         >
-          {/* Founders Scholarship Highlight Banner */}
           <div className="mb-6 p-4 sm:px-6 rounded-2xl bg-gradient-to-r from-white/[0.05] via-white/[0.02] to-transparent border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3.5">
               <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400">
@@ -71,7 +67,6 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Education Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {EDUCATION_DATA.map((edu, index) => (
               <SpotlightCard key={index} className="p-6">
@@ -100,7 +95,6 @@ export const About: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Technologies Subheading */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +107,6 @@ export const About: React.FC = () => {
           </h3>
         </motion.div>
 
-        {/* 4-Card Categorized Bento Tech Stack Grid (Matches screenshot #about) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SKILL_CATEGORIES.map((category, idx) => (
             <motion.div

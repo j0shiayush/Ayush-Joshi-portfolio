@@ -8,7 +8,6 @@ export const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const [activeRoleIndex, setActiveRoleIndex] = useState(0);
 
-  // Typewriter effect
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -19,7 +18,6 @@ export const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [fullText]);
 
-  // 2-Second Looping Role Highlight Effect
   useEffect(() => {
     const roleInterval = setInterval(() => {
       setActiveRoleIndex((prev) => (prev + 1) % PERSONAL_INFO.roles.length);
@@ -32,18 +30,15 @@ export const Hero: React.FC = () => {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-28 pb-16 bg-obsidian-grid overflow-hidden"
     >
-      {/* Subtle top radial spotlight */}
       <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-white/[0.04] blur-[130px] rounded-full" />
 
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
-        {/* Left / Center Content Column */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left"
         >
-          {/* Achievement / Status Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-neutral-300 mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>{PERSONAL_INFO.statusBadge}</span>
@@ -51,13 +46,11 @@ export const Hero: React.FC = () => {
             <span className="text-neutral-400 hidden sm:inline">AIR 92 SRMJEEE Scholar</span>
           </div>
 
-          {/* Typewriter Main Heading */}
           <h1 className="text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-neutral-300 leading-[1.12] mb-5">
             {typedText}
             <span className="inline-block w-[3px] h-10 sm:h-14 xl:h-16 bg-neutral-400 ml-1.5 align-middle animate-pulse" />
           </h1>
 
-          {/* Animated Role Highlight Bar */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 text-base sm:text-xl font-medium mb-4">
             {PERSONAL_INFO.roles.map((role, idx) => (
               <React.Fragment key={role}>
@@ -77,12 +70,10 @@ export const Hero: React.FC = () => {
             ))}
           </div>
 
-          {/* Subtitle / Bio Tagline */}
           <p className="text-neutral-400 text-sm sm:text-base max-w-xl leading-relaxed mb-8">
             {PERSONAL_INFO.tagline}
           </p>
 
-          {/* Minimalist Text Social Links */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-neutral-400 mb-8">
             <a href="https://github.com/j0shiayush" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-200">GitHub</a>
             <a href="https://www.linkedin.com/in/ayush-joshi-86b06a21b/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-200">LinkedIn</a>
@@ -90,7 +81,6 @@ export const Hero: React.FC = () => {
             <span className="text-neutral-500">{PERSONAL_INFO.phone}</span>
           </div>
 
-          {/* Resume Pill Button & Projects CTA */}
           <div className="flex flex-wrap items-center gap-4">
             <a
               href={PERSONAL_INFO.resumeUrl}
@@ -111,7 +101,6 @@ export const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right Column: Clean Professional Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -122,7 +111,6 @@ export const Hero: React.FC = () => {
             {/* Ambient Backlight Glow */}
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-white/10 via-white/5 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
 
-            {/* Single Professional Photo Card (No Badges) */}
             <motion.div
               whileHover={{ rotate: 0, scale: 1.02 }}
               initial={{ rotate: 2 }}
@@ -139,14 +127,11 @@ export const Hero: React.FC = () => {
                   }}
                   className="w-full h-full object-cover object-center grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
-                {/* Enhanced bottom gradient overlay inside portrait */}
                 <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#050505] via-black/70 to-transparent flex items-end p-5">
                   <div className="w-full">
-                    {/* Elegant Soft Gold color for the name with a drop shadow */}
                     <p className="text-amber-300 text-base font-bold tracking-wide drop-shadow-lg">
                       {PERSONAL_INFO.name}
                     </p>
-                    {/* Crisp Ice Blue/Cyan for the subtitle to ensure high contrast */}
                     <p className="text-cyan-50 text-xs font-medium mt-1 drop-shadow-md">
                       B.Tech CSE • SRM University (8.1 CGPA)
                     </p>
@@ -158,7 +143,6 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Bottom Scroll Indicator */}
       <motion.a
         href="#about"
         initial={{ opacity: 0 }}
