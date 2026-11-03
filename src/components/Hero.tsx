@@ -135,7 +135,7 @@ export const Hero: React.FC = () => {
                   alt={PERSONAL_INFO.name}
                   onError={(e) => {
                     (e.target as HTMLImageElement).src =
-                      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';
+                      'src/assets/ayush-photo.png';
                   }}
                   className="w-full h-full object-cover object-center grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
